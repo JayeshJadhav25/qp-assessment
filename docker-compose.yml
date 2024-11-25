@@ -1,0 +1,43 @@
+version: '3.3'
+
+services:
+  # Node.js Application
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: node-app
+    ports:
+      - "3000:3000"
+    environment:
+      - MYSQL_HOST=mysql-db
+      - MYSQL_USER=root
+      - MYSQL_PASSWORD=ac3r
+      - MYSQL_DATABASE=groceries
+    depends_on:
+      - mysql
+    networks:
+      - app-network
+
+  # MySQL Database
+  mysql:
+    image: mysql:8
+    container_name: mysql-db
+    environment:
+      MYSQL_ROOT_PASSWORD: ac3r
+      MYSQL_DATABASE: groceries
+    ports:
+      - "3306:3306"
+    volumes:
+      - mysql-data:/var/lib/mysql
+    networks:
+      - app-network
+
+# Volumes
+volumes:
+  mysql-data:
+
+# Networks
+networks:
+  app-network:
+    driver: bridge
