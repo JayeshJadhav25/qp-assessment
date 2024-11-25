@@ -1,0 +1,288 @@
+{
+	"info": {
+		"_postman_id": "3e0c352c-85b1-4e95-9966-0b9318bd2e3e",
+		"name": "Groceries Item",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "17724395"
+	},
+	"item": [
+		{
+			"name": "view all grocery item api",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMyNTI5OTE1LCJleHAiOjE3MzI1MzM1MTV9.Nw8BgXyxtWD7LkwIk8hfN-pnDzhjGo3FFVTGUopeoNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/admin/groceries",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"groceries"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Add grocery item api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMyNTI5OTE1LCJleHAiOjE3MzI1MzM1MTV9.Nw8BgXyxtWD7LkwIk8hfN-pnDzhjGo3FFVTGUopeoNE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"item3\",\n    \"price\": \"200\",\n    \"quantity\": 10\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/grocery",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"grocery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "update grocery api",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMyNTI5OTE1LCJleHAiOjE3MzI1MzM1MTV9.Nw8BgXyxtWD7LkwIk8hfN-pnDzhjGo3FFVTGUopeoNE",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"item3\",\n    \"price\": 200,\n    \"quantity\": 20\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/grocery/10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"grocery",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Delete grocery api",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMyNTI5OTE1LCJleHAiOjE3MzI1MzM1MTV9.Nw8BgXyxtWD7LkwIk8hfN-pnDzhjGo3FFVTGUopeoNE",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/admin/grocery/10",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"grocery",
+						"10"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "manage inventory api",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6MSwicm9sZSI6ImFkbWluIiwiaWF0IjoxNzMyNTE2NzUxLCJleHAiOjE3MzI1MjAzNTF9.Q9zQGZ20Sv3XCFPE5buWCmH2SmyEeYG-ioEjKUI5j6s",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"id\":3,\n    \"quantity\": 80\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/admin/inventory",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"admin",
+						"inventory"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "User get grocery api",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzI1MTg2MTYsImV4cCI6MTczMjUyMjIxNn0.ccjY7-Tgu3b2RMpdhZGfE9t4oCEH5o05W--p-5vY1hs",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "localhost:3000/api/user/grocery",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"grocery"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Register User APi",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\":\"admin\",\n    \"password\":\"admin123\",\n    \"role\":\"admin\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/register",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"register"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Login API",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"username\": \"admin\",\n    \"password\":\"admin123\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/auth/login",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"auth",
+						"login"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Place order api",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpZCI6Miwicm9sZSI6InVzZXIiLCJpYXQiOjE3MzI1MjAwMTksImV4cCI6MTczMjUyMzYxOX0.8lB66CoKKyVq9YJJlvWzP5Q1MSuNEuoxdMp_Y6b7JrI",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"items\": [\n    { \"itemId\": 3, \"quantity\": 8 }\n    { \"itemId\": 4, \"quantity\": 5 }\n  ]\n}\n",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "localhost:3000/api/user/order",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"api",
+						"user",
+						"order"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
